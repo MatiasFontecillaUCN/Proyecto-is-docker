@@ -13,7 +13,7 @@ services:
     image: matiasfontecillaucn/frontend_proyecto_is:latest
     container_name: frontend_proyecto_is_container
     ports:
-      - 8000:5173
+      - 80:80
     environment:
       - API_URL=http://backend:5000
     depends_on:
