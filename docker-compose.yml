@@ -4,7 +4,7 @@ services:
     image: containrrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30 --debug
+    command: --interval 30
 
     networks:
       - default
@@ -30,7 +30,7 @@ services:
       db_username: ${db_username}
       db_password: ${db_password}
       db_host: mysql # use the service name as the hostname
-      db_port: 3306
+      db_port: ${db_port}
       db_name: ${db_name}
     #command: ["flask", "db", "upgrade"]
     depends_on:
